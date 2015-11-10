@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>bookinformation</title>
+<style type="text/css">
+body {
+	background-image: url(../static/img/3.jpg);
+}
+body,td,th {
+	color: #F00;
+	font-size: 18px;
+	font-weight: bold;
+}
+</style>
+</head>
+<body>
+	<div>
+	  <h1 align="center"> 书籍信息</h1>
+		<form action="booklist" method="post">
+	      <div align="center">
+	        <table width="319" border="1">
+	          <tr>
+		            <td width="124">书号</td>
+		            <td width="179">{{booktest.ISBN}}</td>
+	              </tr>
+		          <tr>
+		            <td>书名</td>
+		            <td>{{booktest.Title}} </td>
+	              </tr>
+		          <tr>
+		            <td>出版社</td>
+		            <td>{{booktest.Publisher}} </td>
+	              </tr>
+		          <tr>
+		            <td>出版日期</td>
+		            <td>{{booktest.Publishdate}}</td>
+	              </tr>
+		          <tr>
+		            <td>价格</td>
+		            <td>{{booktest.Price}}</td>
+	              </tr>
+		          <tr>
+		            <td>作者ID</td>
+		            <td>{{booktest.AuthorID}} </td>
+	              </tr>
+	            </table>
+          </div>
+              </p>
+          <p align="center">
+          <input name="deldate" type="button" value="删除" onClick="location.href='/DelBook/{{booktest.ISBN}}'"/>
+          <input value="{{booktest.ISBN}}" name="booktest.ISBN" type="hidden"></p>
+          <p>
+          <div align="center" class="STYLE3"><a href="addbook.html" title="更新书籍" class="STYLE2">更新书籍</a></div>
+          <p>&nbsp;</p>
+      </form>
+   <p align="right">     
+  <button value="返回主页" onclick="window.location.href('../')"> >返回主页</button> </p>      
+</div>
+</body>
+</html>

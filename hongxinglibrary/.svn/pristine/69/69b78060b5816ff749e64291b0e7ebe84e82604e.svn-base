@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>writerlist</title>
+<style type="text/css">
+body {
+	background-image: url(../static/img/3.jpg);
+	background-repeat: repeat-y;
+}
+body,td,th {
+	font-size: 18px;
+	color: #F00;
+	font-weight: bold;
+}
+</style>
+</head>
+<body>
+<div>
+	  <h1 align="center"> 作者信息</h1>
+  <form action="library" method="get">
+	      <div align="center">
+	        <table width="303" border="1">
+		          <tr>
+		            <td width="116">作者姓名</td>
+		            <td width="171">{{Authors.Name}}</td>
+	              </tr>
+		          <tr>
+		            <td>作者ID</td>
+		            <td>{{Authors.AulthorID}} </td>
+	              </tr>
+		          <tr>
+		            <td>作者出生日期</td>
+		            <td>{{Authors.Age}}</td>
+	              </tr>
+		          <tr>
+		            <td>作者国籍</td>
+		            <td>{{Authors.Country}} </td>
+	              </tr>
+	            </table>
+	        </p>
+	  </div>
+      <h1 align="center">作者书籍列表</h1>   
+{% for list_book in AuthorBooks %}   
+   <ul>   
+     <li>书名: {{ list_book.Title }} </li>   
+     <li>价格: {{ list_book.Price }} </li>   
+     <li>编号: {{ list_book.ISBN }} </li>   
+   </ul>   
+{% endfor %}
+
+  </form>
+<p align="right">&nbsp;</p>
+<p align="right">&nbsp;</p>
+<p align="right">&nbsp;</p>
+<p align="right">&nbsp;</p>
+<p align="right">     
+  <button value="返回主页" onclick="location.href('../')"> >返回主页</button> 
+</p>         
+</div>
+</body>
+</html>

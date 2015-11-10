@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>添加书籍</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<style type="text/css">
+<!--
+
+body{background-image: URL(/static/img/2.jpg);
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;}
+
+.STYLE1 {
+	font-family: "宋体";
+	font-size: large;
+}
+.STYLE2 {font-size: large}
+-->
+</style></head>
+
+<body>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<table width="261" height="150" border="1" align="center">
+  <tr>
+    <td width="118"><span class="STYLE1">作者</span></td>
+    <td width="127"><div align="center">
+      <input name="writername" type="text" value="请输入作者姓名" onfocus="javascript:if(this.value=='请输入作者姓名')this.value='';"/>
+    </div></td>
+  </tr>
+  <tr>
+    <td><span class="STYLE2">编号</span></td>
+    <td><div align="center">
+      <input name="writername2" type="text" value="请输入书籍编号" onfocus="javascript:if(this.value=='请输入书籍编号')this.value='';"/>
+    </div></td>
+  </tr>
+  <tr>
+    <td><span class="STYLE2">价格</span></td>
+    <td><div align="center">
+      <input name="writername3" type="text" value="请输入书籍价格" onfocus="javascript:if(this.value=='请输入书籍价格')this.value='';"/>
+    </div></td>
+  </tr>
+  <tr>
+    <td><span class="STYLE2">出版社</span></td>
+    <td><div align="center">
+      <input name="writername4" type="text" value="请输入出版社名" onfocus="javascript:if(this.value=='请输入出版社名')this.value='';"/>
+    </div></td>
+  </tr>
+  <tr>
+    <td>书名</td>
+    <td><div align="center">
+      <input name="writername6" type="text" value="请输入书籍名称" onfocus="javascript:if(this.value=='请输入书籍名称')this.value='';"/>
+    </div></td>
+  </tr>
+  <tr>
+    <td>出版日期</td>
+    <td><input name="writername5" type="text" value="请输入出版日期" onfocus="javascript:if(this.value=='请输入出版日期')this.value='';"/></td>
+  </tr>
+</table>
+<p align="center">
+<input name="" type="submit" value="提交" /><input name="" type="reset" value="清除" /></p>
+<p align="center">&nbsp;</p>
+<p align="center">&nbsp;</p>
+<p align="center">&nbsp;</p>
+<p align="right">&nbsp; 
+  <button value="返回主页" onclick="window.location.href('../')"> >返回主页</button>
+</p>
+</body>
+</html>

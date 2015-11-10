@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>writerlist</title>
+<style type="text/css">
+body {
+	background-image: url(../static/img/3.jpg);
+	background-repeat: repeat-y;
+}
+body,td,th {
+	font-size: 18px;
+	color: #F00;
+	font-weight: bold;
+}
+</style>
+</head>
+<body>
+<div>
+	  <h1 align="center"> 作者信息</h1>
+  
+	      <div align="center">
+	        <table width="303" border="1">
+		          <tr>
+		            <td width="116">作者姓名</td>
+		            <td width="171">{{Authors.Name}}</td>
+	              </tr>
+		          <tr>
+		            <td>作者ID</td>
+		            <td>{{Authors.AuthorID}} </td>
+	              </tr>
+		          <tr>
+		            <td>作者出生日期</td>
+		            <td>{{Authors.Age}}</td>
+	              </tr>
+		          <tr>
+		            <td>作者国籍</td>
+		            <td>{{Authors.Country}} </td>
+	              </tr>
+	            </table>
+	        </p>
+	  </div>
+      <h1 align="center">作者书籍列表</h1>   
+{% for list_book in AuthorBooks %}   
+   <ul>
+   <form  action="/information" method="post">   
+     <li>书名: <input value="{{list_book.Title}}" type="submit" name = "Title" ></input></li>
+   		<input value="{{list_book.ISBN}}" name="book_ISBN" type="hidden">
+        <input value="{{Authors.AuthorID}}" name="author_ID" type="hidden">
+   </form>
+     {% if is_click and list_book.ISBN = book1.ISBN %}  
+     <li>价格: {{ list_book.Price }} </li>   
+     <li>编号: {{ list_book.ISBN }} </li>
+     <li>出版社: {{ list_book.Publisher }} </li>
+     <li>出版日期: {{ list_book.Publishdate }} </li>
+     <li>作者ID: {{ list_book.AuthorID }} </li>
+     {% endif %}   
+   </ul>   
+{% endfor %}
+ 
+ 
+<p align="right">&nbsp;</p>
+<p align="right">&nbsp;</p>
+<p align="right">&nbsp;</p>
+<p align="right">&nbsp;</p>
+<p align="right">     
+  <button value="返回主页" onclick="window.location.href('../')"> >返回主页</button> 
+</p>         
+</div>
+</body>
+</html>
